@@ -1,0 +1,142 @@
+.discounts-page {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  font-family: sans-serif;
+}
+
+/* Left Section */
+.discounts-left {
+  flex: 2;
+  background: #fff;
+  border-radius: 6px;
+  padding: 20px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.discounts-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.add-button {
+  background: #00bfff;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.add-button:hover {
+  background: #009acd;
+}
+
+/* Discount Rows */
+.discounts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.discount-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.discount-info span:first-child {
+  font-weight: 500;
+  margin-right: 10px;
+}
+
+/* Toggle Switch */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+}
+
+.switch input { display: none; }
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #ccc;
+  border-radius: 20px;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #00bfff;
+}
+
+input:checked + .slider:before {
+  transform: translateX(20px);
+}
+
+/* Footer Buttons */
+.discounts-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.previous-btn, .next-btn {
+  padding: 6px 12px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+
+.previous-btn { background: #ccc; }
+.next-btn { background: #00bfff; color: #fff; }
+
+.next-btn:hover { background: #009acd; }
+
+/* Right Section */
+.discounts-right {
+  flex: 1;
+  background: #fff;
+  border-radius: 6px;
+  padding: 20px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 4px 0;
+}
+
+.summary-item.total {
+  font-weight: 600;
+  margin-top: 10px;
+  border-top: 1px solid #eee;
+  padding-top: 10px;
+}
+
+hr { border: none; border-top: 1px solid #eee; margin: 10px 0; }
