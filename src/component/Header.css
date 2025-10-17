@@ -6,8 +6,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 32px;
+  padding: 0;
   background-color: #ffffff;
+  overflow: hidden;
 }
 .header-line {
   position: fixed;
@@ -47,6 +48,7 @@
 }
 
 .logo-icon {
+  margin-left: 16px;
   height: 24px;
   width: 149px;
   background-image: url("../assets/icons/salesdock-logo.png");
@@ -101,6 +103,7 @@
 }
 
 .profile-avatar {
+  margin-right: 16px;
   width: 36px;
   height: 36px;
   border-radius: 50%;

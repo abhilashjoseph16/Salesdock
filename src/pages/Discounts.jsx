@@ -1,48 +1,64 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import "./Discounts.css";
-
-const INITIAL_DISCOUNTS = [
-  { id: "1", name: "Discount name", description: "€ 250,00 one time", enabled: true, amount: 250 },
-  { id: "2", name: "Discount name", description: "5 % one time", enabled: false, amount: 0 },
-  { id: "3", name: "Discount name", description: "€ 250,00 monthly", enabled: false, amount: 0 },
-  { id: "4", name: "Discount name", description: "25 % monthly first 3 months", enabled: false, amount: 0 },
-];
+import AddDiscountModal from "../component/AddDiscountModal";
 
 export default function Discounts() {
-  const [discounts, setDiscounts] = useState(INITIAL_DISCOUNTS);
+  const [discounts, setDiscounts] = useState([
+    {
+      id: 1,
+      name: "Discount name",
+      description: "€ 250,00 one time",
+      enabled: true,
+    },
+    {
+      id: 2,
+      name: "Discount name",
+      description: "5% one time",
+      enabled: false,
+    },
+    {
+      id: 3,
+      name: "Discount name",
+      description: "€ 250,00 monthly",
+      enabled: false,
+    },
+  ]);
 
-  const handleToggle = (id) => {
-    setDiscounts(prev =>
-      prev.map(d =>
-        d.id === id
-          ? { ...d, enabled: !d.enabled, amount: !d.enabled ? parseFloat(d.description.match(/[\d.,]+/)?.[0].replace(",", ".") || 0) : 0 }
-          : d
-      )
+  const [showModal, setShowModal] = useState(false);
+
+  const toggleDiscount = (id) => {
+    setDiscounts((prev) =>
+      prev.map((d) => (d.id === id ? { ...d, enabled: !d.enabled } : d))
     );
   };
-
-  const subtotal = discounts.reduce((sum, d) => sum + d.amount, 0);
 
   return (
     <div className="discounts-page">
       <div className="discounts-left">
         <div className="discounts-header">
           <h2>Discounts</h2>
-          <button className="add-button">+ Add manual discount</button>
+        </div>
+        <div className="add-discount-btn-container">
+          <button
+            className="add-discount-btn"
+            onClick={() => setShowModal(true)}
+          >
+            + Add manual discount
+          </button>
         </div>
 
         <div className="discounts-list">
-          {discounts.map(d => (
-            <div key={d.id} className="discount-row">
+          {discounts.map((discount) => (
+            <div className="discount-item" key={discount.id}>
               <div className="discount-info">
-                <span>{d.name}</span>
-                <span>{d.description}</span>
+                <p className="discount-name">{discount.name}</p>
+                <p className="discount-description">{discount.description}</p>
               </div>
               <label className="switch">
                 <input
                   type="checkbox"
-                  checked={d.enabled}
-                  onChange={() => handleToggle(d.id)}
+                  checked={discount.enabled}
+                  onChange={() => toggleDiscount(discount.id)}
                 />
                 <span className="slider"></span>
               </label>
@@ -51,39 +67,36 @@ export default function Discounts() {
         </div>
 
         <div className="discounts-footer">
-          <button className="previous-btn">Previous</button>
-          <button className="next-btn">Next</button>
+          <button className="footer-btn previous">Previous</button>
+          <button className="footer-btn next">Next</button>
         </div>
       </div>
 
       <div className="discounts-right">
-        <h3>Overzicht</h3>
-        <div className="summary-item">
-          <span>Webasto Pure II laadpaal type 2</span>
-          <span>€ 1.000,00</span>
-        </div>
-        <div className="summary-item">
-          <span>Maandelijkse prijs</span>
-          <span>€ 10,00</span>
-        </div>
-        <hr />
-        <div className="summary-item">
-          <span>Uiteindelijk per maand excl. btw</span>
-          <span>€ 10,00</span>
-        </div>
-        <div className="summary-item">
-          <span>Subtotal eenmalige kosten excl. btw</span>
-          <span>€ 1.000,00</span>
-        </div>
-        <div className="summary-item">
-          <span>Discount name</span>
-          <span>€ {discounts[0].enabled ? discounts[0].amount.toFixed(2) : "0,00"}</span>
-        </div>
-        <div className="summary-item total">
-          <span>Eenmalige kosten excl. btw</span>
-          <span>€ {(1000 - (discounts[0].enabled ? discounts[0].amount : 0)).toFixed(2)}</span>
+        <div className="summary-box">
+          <h3>Overview</h3>
+          <p className="product-name">Webasto Pure II laadpaal type 2</p>
+
+          <div className="summary-row">
+            <span>Monthly price</span>
+            <span>€ 1.000,00</span>
+          </div>
+          <div className="summary-row">
+            <span>Subtotal</span>
+            <span>€ 1.000,00</span>
+          </div>
+          <div className="summary-row">
+            <span>Discount name</span>
+            <span>- € 250,00</span>
+          </div>
+          <div className="summary-row total">
+            <span>Final price</span>
+            <span>€ 750,00</span>
+          </div>
         </div>
       </div>
+
+      {showModal && <AddDiscountModal onClose={() => setShowModal(false)} />}
     </div>
   );
 }
