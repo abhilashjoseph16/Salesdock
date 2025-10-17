@@ -148,11 +148,11 @@ input:checked + .slider:before {
 
 .footer-btn.previous {
   background: transparent;
-  color: #26B7CD;
+  color: #26b7cd;
 }
 
 .footer-btn.next {
-  background: #26B7CD;
+  background: #26b7cd;
   color: #fff;
   font-size: 14px;
   font-weight: 400;
@@ -164,37 +164,94 @@ input:checked + .slider:before {
   flex-shrink: 0;
 }
 
+.overview-image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 64px;
+  width: 100%;
+}
+
+.overview-image-container img {
+  height: 74px;
+  width: 60px;
+}
+
 .summary-box {
   background: #ffffff;
-  border: 1px solid #e0e0e0;
-  border-radius: 4px;
-  padding: 24px;
+  padding: 24px 0px 0px 0px;
+  -webkit-box-shadow: 1px 1px 3px 0px #3333331A;
+  box-shadow: 1px 1px 3px 0px #3333331A;
 }
 
 .summary-box h3 {
-  font-size: 18px;
-  font-weight: 600;
-  margin-bottom: 12px;
+  padding: 0px 24px;
+  color: #8a8a8a;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28px;
+  margin-bottom: 0px;
 }
 
-.product-name {
+.edit-btn {
+  padding: 0px 24px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  margin-left: -5px;
+}
+.edit-btn button {
+  border: none;
   font-size: 14px;
-  color: #555;
-  margin-bottom: 16px;
+  font-weight: 400;
+  cursor: pointer;
+  background: transparent;
+  color: #26b7cd;
+}
+
+.product-text-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #333333;
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: -7px;
+  padding: 0px 24px;
 }
 
 .summary-row {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 8px;
+  background-color: #edf6fb;
+  margin-bottom: 30px;
   font-size: 14px;
-  color: #333;
+  height: 70px;
+  font-weight: 700;
+  color: #333333;
 }
 
-.summary-row.total {
-  font-weight: 600;
-  border-top: 1px solid #ddd;
-  padding-top: 8px;
+.summary-row div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.summary-row span {
+  padding: 24px;
+}
+
+.summary-row-total {
+  font-size: 14px;
+  font-weight: 400;
+  background-color: #edf6fb;
+  color: #333333;
+}
+
+.summary-row-total div {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0px;
+}
+.summary-row-total span {
+  padding: 0px 22px;
 }
 
 @media (max-width: 992px) {

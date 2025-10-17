@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Discounts.css";
 import AddDiscountModal from "../component/AddDiscountModal";
+import overViewImage from "../assets/icons/overview-image.png";
 
 export default function Discounts() {
   const [discounts, setDiscounts] = useState([
@@ -74,24 +75,36 @@ export default function Discounts() {
 
       <div className="discounts-right">
         <div className="summary-box">
+          <span className="overview-image-container">
+            <img src={overViewImage} />
+          </span>
           <h3>Overview</h3>
-          <p className="product-name">Webasto Pure II laadpaal type 2</p>
-
-          <div className="summary-row">
-            <span>Monthly price</span>
+          <div className="product-text-container">
+            <p className="product-name">Webasto Pure II laadpaal type 2</p>
             <span>€ 1.000,00</span>
           </div>
-          <div className="summary-row">
-            <span>Subtotal</span>
-            <span>€ 1.000,00</span>
+          <div className="edit-btn">
+            <button>Edit</button>
           </div>
           <div className="summary-row">
-            <span>Discount name</span>
-            <span>- € 250,00</span>
+            <div>
+              <span>Eventually per month excl. btw</span>
+              <span>€ 10,00</span>
+            </div>
           </div>
-          <div className="summary-row total">
-            <span>Final price</span>
-            <span>€ 750,00</span>
+          <div className="summary-row-total">
+            <div>
+              <span>Subtotal onetime costs excl. btw</span>
+              <span>€ 1.000,00</span>
+            </div>
+            <div>
+              <span>Discount name</span>
+              <span>- € 250,00</span>
+            </div>
+            <div>
+              <span>Onetime costs excl. btw</span>
+              <span>€ 750,00</span>
+            </div>
           </div>
         </div>
       </div>
