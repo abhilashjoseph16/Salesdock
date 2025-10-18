@@ -1,26 +1,37 @@
-.previous-btb-container{
-  display: flex;
-  justify-content: flex-start;
+.page-center {
+  width: 100%;
+  max-width: 1154px;
+  margin: 0 auto;
+  padding: 20px 24px 40px;
+  box-sizing: border-box;
+  background-color: #f5f6f8;
 }
 
-.previous-btb-container button{
+.previous-btb-container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 12px;
+  box-sizing: border-box;
+}
+
+.previous-top-btn {
   width: 85px;
   height: 40px;
   background-color: #767676;
-  color: #FFFFFF;
+  color: #ffffff;
   border: none;
   font-size: 14px;
   font-weight: 400;
+  cursor: pointer;
 }
 
-.discounts-page {
+.content-row {
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  background-color: #f5f6f8;
-  padding: 20px 24px 40px 24px;
   gap: 32px;
-  flex-wrap: nowrap;
+  align-items: flex-start;
+  justify-content: center;
+  white-space: normal;
 }
 
 .discounts-left {
@@ -31,6 +42,7 @@
   max-width: 100%;
   display: flex;
   flex-direction: column;
+  box-sizing: border-box;
 }
 
 .discounts-header {
@@ -90,12 +102,7 @@
   width: 80%;
 }
 
-.discount-name {
-  color: #333333;
-  font-size: 14px;
-  font-weight: 400;
-}
-
+.discount-name,
 .discount-description {
   color: #333333;
   font-size: 14px;
@@ -124,6 +131,7 @@
   bottom: 0;
   background-color: #ccc;
   transition: 0.3s;
+
 }
 
 .slider:before {
@@ -176,6 +184,7 @@ input:checked + .slider:before {
   width: 351px;
   max-width: 100%;
   flex-shrink: 0;
+  box-sizing: border-box;
 }
 
 .overview-image-container {
@@ -214,6 +223,7 @@ input:checked + .slider:before {
   margin-bottom: 12px;
   margin-left: -5px;
 }
+
 .edit-btn button {
   border: none;
   font-size: 14px;
@@ -269,25 +279,32 @@ input:checked + .slider:before {
 }
 
 @media (max-width: 992px) {
-  .discounts-page {
+  .page-center {
+    max-width: 750px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .content-row {
     flex-direction: column;
+    gap: 20px;
     align-items: center;
   }
 
   .discounts-left,
   .discounts-right {
     width: 100%;
-    max-width: 750px;
+    max-width: 100%;
   }
 
-  .discounts-right {
-    margin-top: 24px;
+  .previous-btb-container {
+    padding-left: 0;
   }
 }
 
 @media (max-width: 600px) {
-  .discounts-page {
-    padding: 20px 12px;
+  .page-center {
+    padding: 12px;
   }
 
   .discounts-header {
