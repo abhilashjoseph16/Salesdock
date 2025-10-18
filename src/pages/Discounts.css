@@ -1,9 +1,24 @@
+.previous-btb-container{
+  display: flex;
+  justify-content: flex-start;
+}
+
+.previous-btb-container button{
+  width: 85px;
+  height: 40px;
+  background-color: #767676;
+  color: #FFFFFF;
+  border: none;
+  font-size: 14px;
+  font-weight: 400;
+}
+
 .discounts-page {
   display: flex;
   justify-content: center;
   align-items: flex-start;
   background-color: #f5f6f8;
-  padding: 40px 24px;
+  padding: 20px 24px 40px 24px;
   gap: 32px;
   flex-wrap: nowrap;
 }
@@ -66,7 +81,6 @@
   justify-content: space-between;
   align-items: center;
   padding: 20px 0;
-  /* border-bottom: 1px solid #eee; */
 }
 
 .discount-info {
