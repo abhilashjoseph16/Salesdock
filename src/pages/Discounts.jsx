@@ -99,6 +99,10 @@ export default function Discounts() {
                 <p className="product-name">Webasto Pure II laadpaal type 2</p>
                 <span>€ 1.000,00</span>
               </div>
+              <div className="product-text-container">
+                <p className="product-name"><i>Maandelijkse prijs</i></p>
+                <span>€ 10,00</span>
+              </div>
               <div className="edit-btn">
                 <button>Edit</button>
               </div>

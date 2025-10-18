@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "./AddDiscountModal.css";
+import OutsideIcon from "../assets/icons/Outside.png";
+import RadioIcon from "../assets/icons/Radio.png";
 
 export default function AddDiscountModal({ onClose, onSave }) {
   const [priceType, setPriceType] = useState("monthly");
@@ -18,6 +20,7 @@ export default function AddDiscountModal({ onClose, onSave }) {
     <div className="modal-overlay">
       <div className="modal-content">
         <h3>Add discount</h3>
+        <span className="modal-content-subtitle">For which price do you calculate the discount?</span>
         <form onSubmit={handleSubmit}>
           <div className="price-toggle">
             <button
@@ -25,14 +28,14 @@ export default function AddDiscountModal({ onClose, onSave }) {
               className={priceType === "one-time" ? "toggle-btn active" : "toggle-btn"}
               onClick={() => setPriceType("one-time")}
             >
-              One time price
+              One time price <img src={priceType === "one-time" ? RadioIcon : OutsideIcon} />
             </button>
             <button
               type="button"
               className={priceType === "monthly" ? "toggle-btn active" : "toggle-btn"}
               onClick={() => setPriceType("monthly")}
             >
-              Monthly price
+              Monthly price <img src={priceType === "monthly" ? RadioIcon : OutsideIcon} />
             </button>
           </div>
 
@@ -56,9 +59,8 @@ export default function AddDiscountModal({ onClose, onSave }) {
               type="text"
               value={duration}
               onChange={(e) => setDuration(e.target.value)}
-              placeholder="Enter duration"
+              placeholder="months"
             />
-            <span>months</span>
           </div>
 
           <label>New price</label>
