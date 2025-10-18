@@ -36,12 +36,10 @@ export default function Discounts() {
   return (
     <>
       <div className="page-center">
-        {/* previous button aligned to left panel */}
         <div className="previous-btb-container">
           <button className="previous-top-btn">Previous</button>
         </div>
 
-        {/* this row contains left + right panels centered together */}
         <div className="content-row">
           <div className="discounts-left">
             <div className="discounts-header">
@@ -79,6 +77,15 @@ export default function Discounts() {
             <div className="discounts-footer">
               <button className="footer-btn previous">Previous</button>
               <button className="footer-btn next">Next</button>
+            </div>
+            <div className="content-row-stepper">
+              <span>Klantgegevens</span>
+            </div>
+            <div className="content-row-stepper">
+              <span>Productgegevens</span>
+            </div>
+            <div className="content-row-stepper">
+              <span>Checkout</span>
             </div>
           </div>
 
@@ -119,7 +126,6 @@ export default function Discounts() {
           </div>
         </div>
       </div>
-
       {showModal && <AddDiscountModal onClose={() => setShowModal(false)} />}
     </>
   );
