@@ -1,0 +1,360 @@
+.page-center {
+  width: 100%;
+  max-width: 1154px;
+  margin: 0 auto;
+  padding: 20px 24px 40px;
+  box-sizing: border-box;
+  background-color: #f5f6f8;
+}
+
+.previous-btb-container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 12px;
+  box-sizing: border-box;
+}
+
+.previous-top-btn {
+  width: 85px;
+  height: 40px;
+  background-color: #767676;
+  color: #ffffff;
+  border: none;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.content-row {
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+  justify-content: center;
+  white-space: normal;
+}
+
+.discounts-left {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  width: 771px;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.discounts-header {
+  background: #26b7cd;
+  color: #ffffff;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 47px;
+}
+
+.discounts-header h2 {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 160%;
+  padding-left: 16px;
+}
+
+.add-discount-btn-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 14px 24px 12px 0px;
+  border-bottom: 1px solid #eee;
+}
+
+.add-discount-btn {
+  background: transparent;
+  border: none;
+  color: #26b7cd;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 160%;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.add-discount-btn:hover {
+  opacity: 0.8;
+}
+
+.discounts-list {
+  padding: 0px 24px 24px 24px;
+}
+
+.discount-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.discount-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+}
+
+.discount-name,
+.discount-description {
+  color: #333333;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 70px;
+  height: 35px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.3s;
+
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 27px;
+  width: 27px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.3s;
+}
+
+input:checked+.slider {
+  background-color: #26b7cd;
+}
+
+input:checked+.slider:before {
+  transform: translateX(34px);
+}
+
+.discounts-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 24px;
+  border-top: 1px solid #eee;
+}
+
+.footer-btn {
+  border: none;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.footer-btn.previous {
+  background: transparent;
+  color: #26b7cd;
+}
+
+.footer-btn.next {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #26b7cd;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  height: 40px;
+  width: 62px;
+}
+
+.discounts-right {
+  width: 351px;
+  max-width: 100%;
+  flex-shrink: 0;
+  box-sizing: border-box;
+}
+
+.overview-image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 64px;
+  width: 100%;
+}
+
+.overview-image-container img {
+  height: 74px;
+  width: 60px;
+}
+
+.summary-box {
+  background: #ffffff;
+  padding: 24px 0px 0px 0px;
+  -webkit-box-shadow: 1px 1px 3px 0px #3333331A;
+  box-shadow: 1px 1px 3px 0px #3333331A;
+}
+
+.summary-box h3 {
+  padding: 0px 24px;
+  color: #8a8a8a;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28px;
+  margin-bottom: 0px;
+}
+
+.edit-btn {
+  padding: 0px 24px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  margin-left: -5px;
+}
+
+.edit-btn button {
+  border: none;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+  background: transparent;
+  color: #26b7cd;
+}
+
+.product-text-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #333333;
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: -7px;
+  padding: 0px 24px;
+}
+
+.summary-row {
+  background-color: #edf6fb;
+  margin-bottom: 30px;
+  font-size: 14px;
+  height: 70px;
+  font-weight: 700;
+  color: #333333;
+}
+
+.summary-row div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.summary-row span {
+  padding: 24px;
+}
+
+.summary-row-total {
+  font-size: 14px;
+  font-weight: 400;
+  background-color: #edf6fb;
+  color: #333333;
+}
+
+.summary-row-total div {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0px;
+}
+
+.summary-row-total span {
+  padding: 0px 22px;
+}
+
+.content-row-stepper {
+  display: flex;
+  align-items: center;
+  padding-left: 16px;
+  height: 47px;
+  background-color: #CACACA;
+}
+
+.content-row-stepper span {
+  font-size: 14px;
+  font-weight: 400;
+  color: #767676;
+}
+
+.manual-actions{
+  display: flex;
+}
+
+.edit-discount-btn{
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-right: -13px;
+}
+.delete-discount-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+   margin-right: -8px;
+}
+
+@media (max-width: 992px) {
+  .page-center {
+    max-width: 750px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .content-row {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .discounts-left,
+  .discounts-right {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .previous-btb-container {
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .page-center {
+    padding: 12px;
+  }
+
+  .discounts-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .discounts-footer {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .footer-btn {
+    width: 100%;
+  }
+}

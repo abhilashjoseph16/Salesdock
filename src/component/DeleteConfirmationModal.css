@@ -1,0 +1,68 @@
+.delete-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.delete-modal-content {
+    background: #FFFFFF;
+    padding: 24px;
+    width: 500px;
+    height: 160px;
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+}
+
+.delete-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.delete-modal-header h3 {
+    color: #808080;
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.close-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.delete-modal-content p {
+    margin-top: -12px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #808080;
+}
+
+.delete-modal-actions {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.delete-btn {
+    background-color: #CC4B37;
+    color: #FFFFFF;
+    border: none;
+    height: 48px;
+    width: 165px;
+    font-size: 14px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    background-color: #c9302c;
+}
